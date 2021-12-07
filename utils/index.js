@@ -1,6 +1,7 @@
-const Manager = require('./lib/manager');
-const Intern = require('./lib/intern');
-const Engineer = require('./lib/engineer');
+const Manager = require('../lib/manager');
+const Intern = require('../lib/intern');
+const Engineer = require('../lib/engineer');
+const generateHtml = require('./generateHTML');
 const teamMember = [];
 
 const fs = require('fs');
@@ -122,7 +123,7 @@ const newEmployee = () => {
           break;
           case "No employees left to add":
             console.log(teamMember);
-            let html = renderHTML(teamMember);
+            let html = generateHtml(teamMember);
             fs.writeFile("./dist/index.html", html, (err) =>
             err ? console.log(err) : console.log('Successfully created HTML file!'))
           break;
