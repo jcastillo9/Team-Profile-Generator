@@ -3,21 +3,28 @@
   "version": "1.0.0",
   "description": "## Table of Contents   * [User Story](#user-story)   * [Acceptance Criteria](#acceptance-criteria)   * [Technologies Used](#technologies-used)   * [Installation](#installation)   * [Questions](#questions)   * [License](#license)",
   "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcastillo9/Team-Profile-Generator.git"
+    "url": "git+https://github.com/jhur628/10-Homework-BestTeamProfileGenerator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jcastillo9/Team-Profile-Generator/issues"
+    "url": "https://github.com/jhur628/10-Homework-BestTeamProfileGenerator/issues"
   },
-  "homepage": "https://github.com/jcastillo9/Team-Profile-Generator#readme",
+  "homepage": "https://github.com/jhur628/10-Homework-BestTeamProfileGenerator#readme",
   "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
     "jest": "^27.4.3"
   }
 }
