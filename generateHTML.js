@@ -14,11 +14,9 @@ const renderHTML = (employeeCards) => {
     <header>
         <h1>My Team</h1>
     </header>
-    <main class="col-12">
-        <section class="row justify-content-center">
+    <div class="row justify-content-center">
         ${employeeCards}
-          </section>
-    </main>
+    </div>
 </body>
 </html>
     `
@@ -37,12 +35,12 @@ const generateHTML = (teamMember) => {
 
         if (role === "Engineer") {
             const engineerInfo = engineerCard(employee);
-            employeeInfo.push(engineerInfo)
+            employeeInfo.push(engineerInfo);
         }
 
         if (role === "Intern") {
-            const internInfo = internCard(employee);
-            employeeInfo.push(internInfo)
+            const internInfo = engineerCard(employee);
+            employeeInfo.push(internInfo);
         }
 
         const employeeCards = employeeInfo.join('');
@@ -53,7 +51,7 @@ const generateHTML = (teamMember) => {
 const managerCard = (managerInput) => {
     return  `
     <div class="card mx-4" style="width: 18rem;">
-            <div class="card-header">${managerInput.name}Manager
+            <div class="card-header">${managerInput.name} <strong>Manager</strong>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID:${managerInput.id}</li>
@@ -68,7 +66,7 @@ const internCard = (internInput) => {
     return `
     <div class="card mx-4" style="width: 18rem;">
             <div class="card-header">
-                ${internInput.name}Intern
+                ${internInput.name} <strong>Intern</strong>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID:${internInput.id}</li>
@@ -83,7 +81,7 @@ const engineerCard = (engineerInput) => {
     `
     <div class="card mx-4" style="width: 18rem;">
             <div class="card-header">
-            ${engineerInput.name}Engineer
+            ${engineerInput.name} <strong>Engineer</strong>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID:${engineerInput.id}</li>
@@ -94,4 +92,5 @@ const engineerCard = (engineerInput) => {
           </div>
     `
 }
+
 module.exports = generateHTML;
