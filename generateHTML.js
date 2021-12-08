@@ -1,4 +1,4 @@
-const renderHTML = (indexInput) => {
+const renderHTML = (employeeCards) => {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -24,29 +24,29 @@ const renderHTML = (indexInput) => {
     `
 }
 
-const generateHTML = (employeeTeam) => {
-    let cardsArray = [];
-    for (let i = 0; i < employeeTeam.length; i++) {
-        const employee = employeeTeam[i];
+const generateHTML = (teamMember) => {
+    let employeeInfo = [];
+    for (let i = 0; i < teamMember.length; i++) {
+        const employee = teamMember[i];
         const role = employee.getRole();
 
         if (role === "Manager") {
             const managerInfo = managerCard(employee);
-            cardArray.push(managerInfo);
+            employeeInfo.push(managerInfo);
         }
 
         if (role === "Engineer") {
             const engineerInfo = engineerCard(employee);
-            cardArray.push(engineerInfo)
+            employeeInfo.push(engineerInfo)
         }
 
         if (role === "Intern") {
             const internInfo = internCard(employee);
-            cardArray.push(internInfo)
+            employeeInfo.push(internInfo)
         }
 
-        const cards = cardArray.join('');
-        const generateCards = renderHTML(cards)
+        const employeeCards = employeeInfo.join('');
+        const generateCards = renderHTML(employeeCards)
         return generateCards
     } 
 }
@@ -94,3 +94,4 @@ const engineerCard = (engineerInput) => {
           </div>
     `
 }
+module.exports = generateHTML;
