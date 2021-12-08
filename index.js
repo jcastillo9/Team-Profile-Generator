@@ -33,8 +33,8 @@ const managerInfo = () => {
     .then(response => {
         const manager = new Manager(response.name, response.id, response.email, response.officeNumber);
         teamMember.push(manager);
-        // console.log("Manager has been added!")
-        newEmployee();
+        console.log("Manager has been added!")
+        addEmployee();
     })
     
 }
@@ -65,8 +65,8 @@ const internInfo = () => {
     .then(response => {
         const intern = new Intern(response.name, response.id, response.email, response.school);
         teamMember.push(intern);
-        // console.log("Intern has been added!")
-        newEmployee();
+        console.log("Intern has been added!")
+        addEmployee();
     })
 }
 
@@ -97,11 +97,11 @@ const engineerInfo = () => {
         const engineer = new Engineer(response.name, response.id, response.email, response.githun);
         teamMember.push(engineer);
         console.log("Engineer has been added!")
-        newEmployee();
+        addEmployee();
     })
 }
 
-const newEmployee = () => {
+const addEmployee = () => {
     inquirer.prompt([
         {
             type: "list",
@@ -116,8 +116,8 @@ const newEmployee = () => {
         }
     ]).then(response => {
         switch (response.newEmployee) {
-            case "Manager":
-            managerInfo();
+        case "Manager":
+        managerInfo();
           break;
           case "Engineer":
             engineerInfo();
@@ -125,7 +125,7 @@ const newEmployee = () => {
           case "Intern":
             internInfo();
           break;
-          case "No employees left to add":
+          case "Done with employee list":
             console.log(teamMember);
             let employeeData = generateHTML(teamMember);
             fs.writeFile('./dist/index.html', employeeData, (err) =>
