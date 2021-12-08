@@ -9,7 +9,7 @@ describe('Employee', () => {
     it('displays id as 123', () => {
         expect(newEmployee.id).toBe(123)
     });
-
+    
     it('displays email as johnsmith@johnsmith.com', () => {
         expect(newEmployee.email).toBe("johnsmith@johnsmith.com")
     });
