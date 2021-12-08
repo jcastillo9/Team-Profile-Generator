@@ -32,8 +32,9 @@ As amanager, I want to generate a webpage that displays my team's basic info, so
 
 ## Technologies Used
   * node.js
-  * jest
-  * classes
+  * Javascript
+  * Jest
+  * Classes
   * HTML
   * CSS
 
