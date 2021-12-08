@@ -12,22 +12,49 @@ const managerInfo = () => {
     {
         type: "input",
         name: "name",
-        message: "What is the manager's name?"
+        message: "What is the manager's name?",
+        validate: (response) => {
+            if(response === '') {
+                return 'Please enter a name.'
+            }
+            else return true
+        }
     },
     {
         type: "input",
         name: "id",
-        message: "What is the manager's id number"
+        message: "What is the manager's id number",
+        validate: (response) => {
+            if(response === '') {
+                return 'Please enter an ID number.'
+            }
+            else return true
+        }
     },
     {
         type: "input",
         name: "email",
-        message: "What is the manager's email address?"
+        message: "What is the manager's email address?",
+        validate: (response) => {
+            if(response === '') {
+                return 'Please enter an email address.'
+            }
+            else if(response.includes('@') !== true) {
+                return 'Please enter a valid email address.'
+            }
+            else return true
+        }
     },
     {
         type: "input",
         name: "office number",
-        message: "What is the manager's office number?"
+        message: "What is the manager's office number?",
+        validate: (response) => {
+            if(response === '') {
+                return 'Please enter an office number.'
+            }
+            else return true
+        }
     }
 ])
     .then(response => {
@@ -44,22 +71,49 @@ const engineerInfo = () => {
         {
             type: "input",
             name: "name",
-            message: "What is the engineer's name?"
+            message: "What is the engineer's name?",
+            validate: (response) => {
+                if(response === '') {
+                    return 'Please enter a name.'
+                }
+                else return true
+            }
         },
         {
             type: "input",
             name: "id",
-            message: "What is the engineer's id number"
+            message: "What is the engineer's id number",
+            validate: (response) => {
+                if(response === '') {
+                    return 'Please enter an ID number.'
+                }
+                else return true
+            }
         },
         {
             type: "input",
             name: "email",
-            message: "What is the engineer's email address?"
+            message: "What is the engineer's email address?",
+            validate: (response) => {
+                if(response === '') {
+                    return 'Please enter an email address.'
+                }
+                else if(response.includes('@') !== true) {
+                    return 'Please enter a valid email address.'
+                }
+                else return true
+            }
         },
         {
             type: "input",
             name: "github",
-            message: "What is the engineer's Github username?"
+            message: "What is the engineer's Github username?",
+            validate: (response) => {
+                if (response === '') {
+                    return `Please enter a valid Github username.`
+                }
+                else return true
+            }
         }
     ])
     .then(response => {
@@ -75,22 +129,49 @@ const internInfo = () => {
         {
             type: "input",
             name: "name",
-            message: "What is the intern's name?"
+            message: "What is the intern's name?",
+            validate: (response) => {
+                if(response === '') {
+                    return 'Please enter a name.'
+                }
+                else return true
+            }
         },
         {
             type: "input",
             name: "id",
-            message: "What is the intern's id number"
+            message: "What is the intern's id number",
+            validate: (response) => {
+                if(response === '') {
+                    return 'Please enter an ID number.'
+                }
+                else return true
+            }
         },
         {
             type: "input",
             name: "email",
-            message: "What is the intern's email address?"
+            message: "What is the intern's email address?",
+            validate: (response) => {
+                if(response === '') {
+                    return 'Please enter an email address.'
+                }
+                else if(response.includes('@') !== true) {
+                    return 'Please enter a valid email address.'
+                }
+                else return true
+            }
         },
         {
             type: "input",
             name: "school",
-            message: "What school is intern attending?"
+            message: "What school is intern attending?",
+            validate: (response) => {
+                if (response === '') {
+                    return `Please enter a valid school name.`
+                }
+                else return true
+            }
         }
     ])
     .then(response => {
