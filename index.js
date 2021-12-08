@@ -39,6 +39,37 @@ const managerInfo = () => {
     
 }
 
+const engineerInfo = () => {
+    inquirer.prompt ([
+        {
+            type: "input",
+            name: "name",
+            message: "What is the engineer's name?"
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is the engineer's id number"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the engineer's email address?"
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "What is the engineer's Github username?"
+        }
+    ])
+    .then(response => {
+        const engineer = new Engineer(response.name, response.id, response.email, response.github);
+        teamMember.push(engineer);
+        console.log("Engineer has been added!")
+        addEmployee();
+    })
+}
+
 const internInfo = () => {
     inquirer.prompt ([
         {
@@ -66,37 +97,6 @@ const internInfo = () => {
         const intern = new Intern(response.name, response.id, response.email, response.school);
         teamMember.push(intern);
         console.log("Intern has been added!")
-        addEmployee();
-    })
-}
-
-const engineerInfo = () => {
-    inquirer.prompt ([
-        {
-            type: "input",
-            name: "name",
-            message: "What is the engineer's name?"
-        },
-        {
-            type: "input",
-            name: "id",
-            message: "What is the engineer's id number"
-        },
-        {
-            type: "input",
-            name: "email",
-            message: "What is the engineer's email address?"
-        },
-        {
-            type: "input",
-            name: "github",
-            message: "What is the engineer's Github username?"
-        }
-    ])
-    .then(response => {
-        const engineer = new Engineer(response.name, response.id, response.email, response.githun);
-        teamMember.push(engineer);
-        console.log("Engineer has been added!")
         addEmployee();
     })
 }

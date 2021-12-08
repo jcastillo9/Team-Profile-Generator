@@ -34,19 +34,19 @@ const generateHTML = (teamMember) => {
         }
 
         if (role === "Engineer") {
-            const engineerInfo = engineerCard(employee);
-            employeeInfo.push(engineerInfo);
+            const engineerCards = engineerCard(employee);
+            employeeInfo.push(engineerCards)
         }
 
         if (role === "Intern") {
-            const internInfo = engineerCard(employee);
+            const internInfo = internCard(employee);
             employeeInfo.push(internInfo);
         }
-
+    }
         const employeeCards = employeeInfo.join('');
         const generateCards = renderHTML(employeeCards)
         return generateCards
-    } 
+
 }
 const managerCard = (managerInput) => {
     return  `
@@ -78,7 +78,7 @@ const internCard = (internInput) => {
 }
 
 const engineerCard = (engineerInput) => {
-    `
+    return `
     <div class="card mx-4" style="width: 18rem;">
             <div class="card-header">
             ${engineerInput.name} <strong>Engineer</strong>
