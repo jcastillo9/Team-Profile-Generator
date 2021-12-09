@@ -87,7 +87,7 @@ const engineerCard = (engineerInput) => {
                 <li class="list-group-item">ID:${engineerInput.id}</li>
                 <li class="list-group-item">Email:<a href="mailto:"><strong>${engineerInput.email}</strong></a></li>
                 <li class="list-group-item">Github:
-                    <a href="mailto:"><strong>${engineerInput.github}</strong></a></li>
+                    <a href="https://github.com/${engineerInput.github}"><strong>${engineerInput.github}</strong></a></li>
               </ul>
           </div>
     `

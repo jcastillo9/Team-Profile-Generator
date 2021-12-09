@@ -47,7 +47,7 @@ const managerInfo = () => {
     },
     {
         type: "input",
-        name: "office number",
+        name: "officeNumber",
         message: "What is the manager's office number?",
         validate: (response) => {
             if(response === '') {
