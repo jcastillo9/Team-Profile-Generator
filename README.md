@@ -39,7 +39,7 @@ As amanager, I want to generate a webpage that displays my team's basic info, so
   * CSS
 
 ## Installation
- Link to demo: <https://watch.screencastify.com/v/llpJHl7cvWMbMsvlBN1U>
+ Link to demo: <https://watch.screencastify.com/v/M9IKMtFT8ukbXe7pcuZ0>
  
  <img src="/assets/screenshot.png"/>
  
