@@ -40,7 +40,9 @@ As amanager, I want to generate a webpage that displays my team's basic info, so
 
 ## Installation
  Link to demo: <https://watch.screencastify.com/v/M9IKMtFT8ukbXe7pcuZ0>
+ 
  Sample HTML file generated using application: <https://github.com/jcastillo9/Team-Profile-Generator/blob/main/dist/index.html>
+ 
  <img src="/assets/screenshot.png"/>
  
  ## Questions:
